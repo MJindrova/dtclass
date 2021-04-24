@@ -379,7 +379,7 @@ DEFINE CLASS _DATE AS CUSTOM
          m.lii=ATC(",", m.lcPom)
          IF m.lii>0
             m.lii=VAL(LEFT(m.lcPom, m.lii-1)) && 
-            m.ldDate=IIF(m.lii=0, DATE(), DATE()- (DOW(DATE(),SET("FDOW"))-m.lii))
+            m.ldDate=IIF(m.lii=0, DATE(), DATE()- (DOW(DATE(), 2)-m.lii)) && 2021-04-24
          ENDIF
 
          m.lcDate=STUFF(m.lcDate, m.liY, IIF(m.liCentury=1, 4, 2), STR(YEAR(m.ldDate), IIF(m.liCentury=1, 4, 2)))
