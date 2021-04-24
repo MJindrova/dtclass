@@ -24,3 +24,5 @@ $RECYCLE.BIN/
 *.bak
 *.tbk
 *.fxp
+*.FXP
+src/dtclass.BAK
